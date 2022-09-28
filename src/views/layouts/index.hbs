@@ -1,0 +1,204 @@
+
+   <!DOCTYPE html>
+<!-- saved from url=(0025)https://web.whatsapp.com/ -->
+<html
+  class="js serviceworker adownload cssanimations csstransitions webp exiforientation webp-alpha webp-animation webp-lossless wf-loading"
+  dir="LTR"
+  loc="es"
+  lang="es"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width" />
+    
+  
+  
+    <style>
+      #initial_startup {
+        --startup-background: #f0f2f5;
+        --startup-background-rgb: 240, 242, 245;
+        --startup-icon: #bbc5cb;
+        --secondary-lighter: #8696a0;
+        --primary-title: #41525d;
+        --progress-primary: #00c298;
+        --progress-background: #e9edef;
+      }
+      .dark #initial_startup {
+        --startup-background: #111b21;
+        --startup-background-rgb: 17, 27, 33;
+        --startup-icon: #676f73;
+        --primary-title: rgba(233, 237, 239, 0.88);
+        --secondary-lighter: #667781;
+        --progress-primary: #0b846d;
+        --progress-background: #233138;
+      }
+      #app,
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      #app {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #initial_startup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        background-color: var(--startup-background);
+      }
+      #initial_startup .graphic {
+        margin-top: -40px;
+        color: var(--startup-icon);
+      }
+      #initial_startup .graphic .resume-logo {
+        transform: translateX(calc(50% - 52px / 2));
+      }
+      #initial_startup .graphic::after {
+        position: relative;
+        top: -100%;
+        left: calc(50% - 72px * 2 - 72px / 2);
+        display: block;
+        width: calc(72px * 3);
+        height: 100%;
+        content: "";
+        background: linear-gradient(
+          to right,
+          rgba(var(--startup-background-rgb), 0.5) 0,
+          rgba(var(--startup-background-rgb), 0.5) 33.33%,
+          rgba(var(--startup-background-rgb), 0) 44.1%,
+          rgba(var(--startup-background-rgb), 0) 55.8%,
+          rgba(var(--startup-background-rgb), 0.5) 66.66%,
+          rgba(var(--startup-background-rgb), 0.5) 100%
+        );
+        opacity: 1;
+        animation: shimmer 1.5s linear 0.6s infinite;
+      }
+      html[dir="rtl"] #initial_startup .graphic::after {
+        animation-direction: reverse;
+      }
+      @keyframes shimmer {
+        from {
+          left: calc(50% - 72px * 2 - 72px / 2);
+        }
+        to {
+          left: calc(50% - 72px / 2);
+        }
+      }
+      #initial_startup .progress {
+        position: relative;
+        width: 420px;
+        height: 3px;
+        margin-top: 40px;
+      }
+      #initial_startup .progress progress {
+        vertical-align: top;
+      }
+      #initial_startup .main {
+        margin-top: 40px;
+        font-size: 17px;
+        color: var(--primary-title);
+      }
+      #initial_startup .secondary {
+        margin-top: 12px;
+        font-size: 14px;
+        color: var(--secondary-lighter);
+      }
+      #initial_startup .secondary span {
+        display: inline-block;
+        margin-bottom: 2px;
+        vertical-align: middle;
+      }
+      progress {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 3px;
+        margin: 0;
+        color: var(--progress-primary);
+        background-color: var(--progress-background);
+        border: none;
+      }
+      progress[value]::-webkit-progress-bar {
+        background-color: var(--progress-background);
+      }
+      progress[value]::-moz-progress-bar,
+      progress[value]::-webkit-progress-value {
+        background-color: var(--progress-primary);
+        transition: width 0.45s ease;
+      }
+    </style>
+    <link
+      href="../../static/css/stylex-082eefb6955f9a18a5bc246b463368f4.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../static/css/bootstrap_qr-e60f0b990f477f25a8d1.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/css/bootstrap_main.c6931af0d277372296c8.css"
+    />
+    <style id="asset-style" type="text/css"></style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/css/lazy_loaded_high_priority_components.87f23220502e404ed73c.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../static/css/lazy_loaded_low_priority_components.133150805f6ef0ef9da7.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Noto-Emoji";
+        src: url("/noto_emoji_regular_40c0691231b767bd3e693d583006a1ed.ttf")
+          format("truetype");
+      }
+    </style>   
+   
+
+    <link
+      rel="stylesheet"
+      href="../../static/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="../../static/css/all.css"
+      crossorigin="anonymous"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="../../static/css/font-awesome.css"
+      crossorigin="anonymous"
+    />
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/js/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+    
+    {{{body}}}
+  </body>
+</html>
